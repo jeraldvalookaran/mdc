@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Jerald's Personal Website</title>
+    <style>
+        /* Modern photo background with dark overlay */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #fff;
+            background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1920&q=80') no-repeat center center fixed;
+            background-size: cover;
+            position: relative;
+        }
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0, 0, 0, 0.55); /* dark overlay for readability */
+            z-index: -1;
+        }
+
+        /* General Body and Page Structure */
+        /* Text color is white now, adjust other colors accordingly */
+        header {
+            background-color: rgba(44, 62, 80, 0.85); /* Slightly transparent dark blue */
+            color: #ecf0f1;
+            text-align: center;
+            padding: 2em 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            letter-spacing: 2px;
+        }
+        
+        nav {
+            background-color: rgba(52, 73, 94, 0.85);
+            text-align: center;
+            padding: 0.5em 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: #ecf0f1;
+            text-decoration: none;
+            padding: 1em 1.5em;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover,
+        nav a.active {
+            background-color: #1abc9c;
+            color: #fff;
+        }
+
+        main {
+            padding: 2em;
+            max-width: 900px;
+            margin: 2em auto;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+        }
+        
+        .content-section {
+            display: none;
+        }
+        
+        .content-section.active {
+            display: block;
+        }
+        
+        .content-section h2 {
+            color: #1abc9c;
+            border-bottom: 2px solid #1abc9c;
+            padding-bottom: 0.5em;
+        }
+
+        #home h2 {
+            text-align: center;
+            font-size: 2em;
+            color: #ecf0f1;
+        }
+
+        #home p {
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        /* Section-specific colors */
+        #myhobbies h2 { color: #f39c12; border-color: #f39c12; }
+        #qualifications h2 { color: #27ae60; border-color: #27ae60; }
+        #extracurricularactivities h2 { color: #8e44ad; border-color: #8e44ad; }
+        #myhomedetails h2 { color: #d35400; border-color: #d35400; }
+        #contactme h2 { color: #c0392b; border-color: #c0392b; }
+
+        .contact-info {
+            line-height: 1.8;
+            font-size: 1.1em;
+        }
+
+        /* Image styling */
+        #home img {
+            max-width: 200px;
+            border-radius: 50%;
+            margin-bottom: 1em;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.7);
+        }
+
+        footer {
+            background-color: rgba(44, 62, 80, 0.85);
+            color: #ecf0f1;
+            text-align: center;
+            padding: 1em 0;
+            margin-top: 2em;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Jerald's Personal Website</h1>
+    </header>
+
+    <nav>
+        <a href="#home" class="menu-item active">Home</a>
+        <a href="#myhobbies" class="menu-item">My Hobbies</a>
+        <a href="#qualifications" class="menu-item">Qualifications</a>
+        <a href="#extracurricularactivities" class="menu-item">Extracurricular Activities</a>
+        <a href="#myhomedetails" class="menu-item">My Home Details</a>
+        <a href="#contactme" class="menu-item">Contact Me</a>
+    </nav>
+
+    <main>
+        <div id="home" class="content-section active">
+            <center><img src="img0.jpg" align="top"></center></img>
+            <center><h2>Welcome to my world!</h2></center>
+            <p>
+                Hello! My name is Jerald. This website is a personal space where I share a bit about myself, including my hobbies, qualifications, and other activities. Please use the navigation menu above to explore different sections and get to know me better.
+            </p>
+        </div>
+
+       <center> <div id="myhobbies" class="content-section"><center>
+         <center>   <h2>My Hobbies</h2><center>
+           <img src="img7.jpg"></img>
+            <p>
+                When I'm not working or studying, I love to spend my time on various hobbies. These activities help me relax, learn new skills, and connect with others.
+            </p>
+            <ul>
+                <li><strong>Gardening:</strong> I find peace in tending to my plants and watching them grow.</li>
+                <li><strong>Photography:</strong> Capturing moments and beautiful landscapes is a passion of mine.</li>
+                <li><strong>Reading:</strong> I enjoy diving into books of all genres, from classic literature to modern thrill fiction.</li>
+                <li><strong>Cooking:</strong> Experimenting with new recipes and cooking for my family and friends is a great joy.</li>
+            </ul>
+        </div>
+
+        <center><div id="qualifications" class="content-section"><center>
+            <center>  <h2>Qualifications</h2><center>
+              <img src="img8.jpg"></img>
+            <p>
+                Here is a brief overview of my academic and professional qualifications.
+            </p>
+            <ul>
+                <li><strong>Education:</strong> I am currently pursuing a degree in [Your Degree] at [Your University].</li>
+                <li><strong>Certifications:</strong> I hold certifications in [Certification 1] and [Certification 2].</li>
+                <li><strong>Skills:</strong> I am proficient in [Skill 1], [Skill 2], and [Skill 3].</li>
+            </ul>
+        </div>
+
+          <center><div id="extracurricularactivities" class="content-section"><center>
+            <center><h2>Extracurricular Activities</h2><center>
+             <img src="img 2.jpg"></img>
+            <p>
+                Beyond my academic pursuits, I am actively involved in several extracurricular activities.
+            </p>
+            <ul>
+                <li><strong>Volunteer Work:</strong> I volunteer at [Organization Name], helping with [Type of work].</li>
+                <li><strong>Club Membership:</strong> I am a member of the [Club Name] where I serve as [Your Role].</li>
+                <li><strong>Sports:</strong> I play [Your Sport] for the university team.</li>
+            </ul>
+        </div>
+        
+        <center><div id="myhomedetails" class="content-section"><center>
+            <center><h2>My Home Details</h2><center>
+             <img src="img9.jpg"</img>
+            <p>
+                I live in a peaceful neighborhood located in [Your City, State/Country]. My home is surrounded by beautiful green spaces, perfect for my love of gardening. It's a place where I can truly unwind and feel inspired.
+            </p>
+            <p><em>(Note: For privacy and security, it is best to provide general information rather than specific addresses.)</em></p>
+        </div>
+
+        <center><div id="contactme" class="content-section"><center>
+            <center><h2>Contact Me</h2><center>
+             <img src="img 4.jpg"</img>
+            <p>
+                Feel free to reach out to me! You can connect with me through the following:
+            </p>
+            <div class="contact-info">
+                <p><strong>Email:</strong> your.email@example.com</p>
+                <p><strong>LinkedIn:</strong> linkedin.com/in/yourprofile</p>
+                <p><strong>Phone:</strong> +91-xxxxxxxxxx</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Jerald. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuItems = document.querySelectorAll('.menu-item');
+            const contentSections = document.querySelectorAll('.content-section');
+
+            // Function to show the correct content section
+            const showSection = (id) => {
+                contentSections.forEach(section => {
+                    section.classList.remove('active');
+                });
+                const sectionToShow = document.getElementById(id);
+                if (sectionToShow) {
+                    sectionToShow.classList.add('active');
+                }
+            };
+
+            // Function to update the active menu item
+            const updateActiveMenu = (targetId) => {
+                menuItems.forEach(item => {
+                    item.classList.remove('active');
+                    if (item.getAttribute('href') === `#${targetId}`) {
+                        item.classList.add('active');
+                    }
+                });
+            };
+
+            // Add click event listeners to menu items
+            menuItems.forEach(item => {
+                item.addEventListener('click', (event) => {
+                    event.preventDefault(); // Prevent default anchor link behavior
+                    const targetId = event.target.getAttribute('href').substring(1);
+                    showSection(targetId);
+                    updateActiveMenu(targetId);
+                    // Use history.pushState to update the URL without a full page reload
+                    history.pushState(null, '', `#${targetId}`);
+                });
+            });
+
+            // Handle initial page load and back/forward button clicks
+            const initialSection = window.location.hash.substring(1) || 'home';
+            showSection(initialSection);
+            updateActiveMenu(initialSection);
+
+            window.addEventListener('popstate', () => {
+                const targetId = window.location.hash.substring(1) || 'home';
+                showSection(targetId);
+                updateActiveMenu(targetId);
+            });
+        });
+    </script>
+
+</body>
+</html>
